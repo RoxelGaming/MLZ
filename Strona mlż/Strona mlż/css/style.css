@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+
+  --color-button: #222;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+:root {
+  /* ===================== COLOR ===================== */
+  
+  --body-color: #323334;
+  --sidebar-color: #242526;
+  --primary-color: #008000;
+  --primary-color-switch: #008000;
+  --primary-color-light: #3A3B3C;
+  --toggle-color: #FFF;
+  --text-color: #CCC;
+  --text-color-icon: #CCC;
+  --block-color-dark: #000000;
+  --button-on: #00d100;
+  
+  /* ===================== TRANSITION ===================== */
+  
+  --tran-01: all 0.2s ease;
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+  
+  
+/* --header-height: 70px;
+  --width-left: 300px; */
+
+  --header-heigth: 10vh;
+  --header-padding: 10px;
+  
+}
+
+body.light {
+  /* ===================== COLOR ===================== */
+  
+  --body-color: #cbcbcb;
+  --sidebar-color: #7b7c7d;
+  --primary-color: #008000;
+  --primary-color-switch: #008000;
+  --primary-color-light: #1e2021;
+  --toggle-color: #1a1a1a;
+  --text-color: #121212;
+  --text-color-icon: #080808;
+  --block-color-dark: #000000;
+  --button-on: #124d12;
+  
+  /* ===================== TRANSITION ===================== */
+  
+  --tran-01: all 0.2s ease;
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+  
+  
+/* --header-height: 70px;
+  --width-left: 300px; */
+
+  --header-heigth: 10vh;
+  --header-padding: 10px;
+  
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--body-color);
+
+}
+
+a {
+
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+
+}
