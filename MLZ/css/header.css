@@ -180,8 +180,9 @@ h1 {
     }
     
     img {
-    
-        width: calc(var(--header-height) + 30px);
+
+        height: calc(var(--logo-height) - var(--logo-padding));
+        padding: var(--logo-padding);
     
     }
     
