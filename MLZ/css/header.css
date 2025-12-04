@@ -59,6 +59,12 @@ nav > ul > li > a {
 
 }
 
+nav > ul > li > a:hover {
+
+    background-color: var(--sidebar-color);
+
+}
+
 /* Logo + Text */
 .logo-area {
 
