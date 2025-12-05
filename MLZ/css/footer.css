@@ -1,0 +1,12 @@
+footer {
+
+    width: var(--page-width);
+
+    background-color: var(--sidebar-color);
+    border-top: 2px solid var(--text-color);
+    padding: 10px 0 10px 0;
+
+    text-align: center;
+    color: #bbb;
+
+}

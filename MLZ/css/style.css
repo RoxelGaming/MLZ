@@ -17,14 +17,20 @@
   /* ===================== COLOR ===================== */
   
     --body-color: #323334;
+
     --sidebar-color: #242526;
     --sidebar-color-darker: #161616;
+
     --primary-color: #008000;
     --primary-color-switch: #008000;
     --primary-color-light: #3A3B3C;
+
     --toggle-color: #FFF;
+
     --text-color: #CCC;
+    --text-color-white: #FFF;
     --text-color-icon: #CCC;
+
     --block-color-dark: #000000;
     --button-on: #00d100;
   
@@ -37,119 +43,54 @@
     --tran-05: all 0.5s ease;
   
     --header-height: 40px;
-    --width-left: 300px;
+    --page-width: 1000px;
   
 }
 
 body {
 
     margin: 0;
-    padding: 0;
+    padding: var(--header-height) 0 0 0;
     font-family: 'Roboto', sans-serif;
     background-color: var(--body-color);
+    scroll-padding-top: var(--header-height);
 
-}
-
-
-/* HEADER
-.top-header {
     display: flex;
-    justify-content: space-between;
-    background: #1c1c1c;
-    padding: 10px;
-    border-bottom: 2px solid #333;
-}
-
-.logo-area {
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+
 }
 
-.logo {
-    width: 40px;
-}
+a {
 
-.right-panels {
-    display: flex;
-    gap: 10px;
-}
-
-.panel.small {
-    background: #2a2a2a;
-    padding: 10px;
-    border-radius: 6px;
-    width: 160px;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background: #000;
-    padding: 10px;
-}
-
-.menu a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+
 }
 
-.layout {
+.container {
+
+    width: var(--page-width);
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+
+    min-height: 100vh;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 0 20px 0;
+
 }
 
-.left-col,
-.right-col {
-    width: 200px;
-}
+@media (max-width: 1000px) {
 
-.center-col {
-    width: 600px;
-}
+    .container {
 
-.panel {
-    background: #222;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-}
+        width: 100%;
 
-.big {
-    height: 180px;
-}
+    }
 
-.main-img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 20px;
 }
-
-.discord-panel {
-    background: #4a5cff;
-    color: white;
-    text-align: center;
-}
-
-.discord-btn {
-    display: block;
-    margin-top: 15px;
-    padding: 10px;
-    background: #fff;
-    color: #000;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 6px;
-}
-
-footer {
-    background: #000;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    color: #bbb;
-} */

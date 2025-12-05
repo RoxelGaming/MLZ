@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minecraftowa Liga Żużlowa</title>
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 </head>
 
 <body>
@@ -13,7 +15,6 @@
         <!-- MENU NAVIGACJI -->
         <nav>
             <ul>
-                <li><a href="index.html">Newsy</a></li>
                 <li><a href="mecze.html">Mecze</a></li>
                 <li><a href="tabela.html">Tabela</a></li>
                 <li><a href="wydarzenia.html">Wydarzenia</a></li>
@@ -27,15 +28,17 @@
             </ul>
         </nav>
 
-        <div class="logo-area">
-            <img src="zdj/logo.png" alt="Logo"/>
-            <h1>Minecraftowa Liga Żużlowa - Główna</h1>
-        </div>
+        <a href="index.html">
+            <div class="logo-area">
+                <img src="zdj/logo.png" alt="Logo"/>
+                <h1>Minecraftowa Liga Żużlowa - Główna</h1>
+            </div>
+        </a>
     </header>
 
 
-    <!-- GŁÓWNY LAYOUT 3-KOLUMNOWY -->
-    <cointainer>
+    <!-- Główny Kontener -->
+    <div class="container">
 
         <!-- LEWA KOLUMNA -->
         <div class="left-col">
@@ -47,7 +50,7 @@
         <!-- ŚRODKOWA KOLUMNA -->
 
         <div class="center-col">
-            <img src="main.jpg" class="main-img" alt="Obrazek" />
+            <img src="zdj/main.png" class="main-img" alt="Obrazek" />
 
             <div class="panel big">
                 <h2>Co nowego w lidze</h2>
@@ -57,7 +60,7 @@
             <div class="panel discord-panel">
                 <h2>Dołącz na Discord!</h2>
                 <p>Wejdź na serwer, aby być na bieżąco z newsami i wydarzeniami.</p>
-                <a href="https://discord.gg/bhsUPSHrU" class="discord-btn">Dołącz teraz</a>
+                <a href="https://discord.gg/bhsUPSHrU" class="discord-btn" target="_blank">Dołącz teraz</a>
             </div>
 
             <div class="panel big">artykuły</div>
@@ -68,10 +71,8 @@
             <div class="panel">najbliższe mecze</div>
             <div class="panel">forum dyskusyjne</div>
         </div>
-
-    </cointainer>
-
-    s
+        
+    </div>
 
     <!-- STOPKA -->
     <footer>
