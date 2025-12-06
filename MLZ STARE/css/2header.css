@@ -1,0 +1,138 @@
+header {
+
+    width: 100%;
+
+    background-color: black;
+
+}
+
+header nav {
+
+    width: 100%;
+    height: var(--header-height);
+
+    background-color: red;
+
+}
+
+/* =============== DUŻE MENU =============== */
+
+.MenuSmall {
+
+    display: none;
+
+}
+
+.allWidth {
+
+    width: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: var(--sidebar-color-darker);
+
+}
+
+.allWidth li {
+
+    width: calc(var(--page-width) / 10);
+    height: var(--header-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.allWidth li a {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.allWidth li:hover {
+
+    background-color: var(--sidebar-color);
+
+}
+
+/* =============== LOGO =============== */
+
+.LogoArea {
+
+    width: var(--page-width);
+    background-color: var(--sidebar-color);
+
+}
+
+.LogoArea > a {
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    width: calc(var(--page-width) - (2 * var(--Logo-padding)));
+    height: var(--Logo-size);
+    margin: var(--Logo-padding); 
+
+}
+
+a > img {
+
+    border-radius: 3px;
+
+    width: var(--Logo-size);
+    height: var(--Logo-size);
+
+}
+
+a > span {
+
+    height: var(--Logo-size);
+    width: 100%;
+
+    padding-left: 20px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .allWidth {
+
+        display: none;
+
+    }
+
+    .smallWidth {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .smallWidth ul {
+
+        display: flex;
+        gap: 10px;
+
+    }
+
+}
