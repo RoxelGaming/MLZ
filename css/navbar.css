@@ -1,0 +1,96 @@
+body {
+
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* NAV BAR (to zostaje jak w poprzednim kodzie) */
+header {
+
+    background-color: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #333;
+
+}
+
+header h1 {
+
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+
+}
+
+nav a {
+
+    color: white;
+    margin-left: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.2s;
+
+}
+
+nav a:hover {
+
+    color: #0af;
+
+}
+
+/* --- KAFELKI LIG --- */
+.league-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+}
+
+.league-card {
+
+    width: 260px;
+    height: 180px;
+    background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+
+}
+
+.league-card:hover {
+
+    transform: translateY(-8px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+
+}
+
+.league-card img {
+
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+
+}
+
+.league-card h2 {
+
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    
+}
