@@ -1,47 +1,128 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLŻ - Tabela</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabele Ligowe</title>
+
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAV BAR (to zostaje jak w poprzednim kodzie) */
+        header {
+            background-color: #1a1a1a;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #0af;
+        }
+
+
+        /* --- KAFELKI LIG --- */
+        .league-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+
+        .league-card {
+            width: 260px;
+            height: 180px;
+            background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+            border-radius: 18px;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+        }
+
+        .league-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+        }
+
+        .league-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .league-card h2 {
+            margin-top: 12px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+    </style>
 </head>
 <body>
-  <header>
-      <!-- MENU NAVIGACJI -->
-      <nav>
-          <ul>
-              <li><a href="mecze.html">Mecze</a></li>
-              <li><a href="tabela.html" class="active">Tabela</a></li>
-              <li><a href="wydarzenia.html">Wydarzenia</a></li>
-              <li><a href="baza.html">Baza</a></li>
-              <li><a href="statystyki.html">Statystyki</a></li>
-              <li><a href="forum.html">Forum</a></li>
-              <li><a href="live.html">Live</a></li>
-              <li><a href="boatclick.html">Boatclick</a></li>
-              <li><a href="mlz-manage.html">MLŻ Manage</a></li>
-              <li><a href="regulamin.html">Regulamin</a></li>
-          </ul>
-      </nav>
 
-      <a href="index.html">
-          <div class="logo-area">
-              <img src="zdj/logo.png" alt="Logo"/>
-              <h1>Minecraftowa Liga Żużlowa - Tabela</h1>
-          </div>
-      </a>
-  </header>
+    <!-- HEADER (z poprzedniego kodu) -->
+    <header>
+        <h1>MLŻ — Tabele Ligowe</h1>
+        <nav>
+            <a href="index.html">Strona Główna</a>
+            <a href="newsy.html">Newsy</a>
+            <a href="mecze.html">Mecze</a>
+            <a href="tabela.html">Tabela</a>
+            <a href="wydarzenia.html">Wydarzenia</a>
+            <a href="baza.html">Baza</a>
+            <a href="statystyki.html">Statystyki</a>
+            <a href="forum.html">Forum</a>
+            <a href="live.html">Live</a>
+        </nav>
+    </header>
 
-  <div class="container">
-    <h1>Tabela</h1>
-    <p>Tu będzie tabela drużyn MLŻ wraz z punktami.</p>
-  </div>
+    <!-- KAFELKI -->
+    <div class="league-container">
 
-  <footer class="footer">
-    © 2025 MLŻ — Wszelkie prawa zastrzeżone.
-  </footer>
+        <a href="ekstraliga.html" class="league-card">
+            <img src="ekstraliga.png" alt="Ekstraliga">
+            <h2>Ekstraliga</h2>
+        </a>
+
+        <a href="1liga.html" class="league-card">
+            <img src="1liga.png" alt="1 Liga">
+            <h2>1 Liga</h2>
+        </a>
+
+        <a href="2liga.html" class="league-card">
+            <img src="2liga.png" alt="2 Liga">
+            <h2>2 Liga</h2>
+        </a>
+
+    </div>
 
 </body>
 </html>

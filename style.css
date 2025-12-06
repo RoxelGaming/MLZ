@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    background: #111;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* HEADER */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    background: #1c1c1c;
+    padding: 10px;
+    border-bottom: 2px solid #333;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+}
+
+/* PANEL GÓRNY PO PRAWEJ */
+.right-panels {
+    display: flex;
+    gap: 10px;
+}
+
+.panel.small {
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 6px;
+    width: 160px;
+}
+
+/* NAV MENU */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #000;
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LAYOUT TRZYKOLUMNOWY */
+.layout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-col,
+.right-col {
+    width: 200px;
+}
+
+.center-col {
+    width: 600px;
+}
+
+/* PANELE */
+.panel {
+    background: #222;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.big {
+    height: 180px;
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* DISCORD PANEL */
+.discord-panel {
+    background: #4a5cff;
+    color: white;
+    text-align: center;
+}
+
+.discord-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/* STOPKA */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    color: #bbb;
+}

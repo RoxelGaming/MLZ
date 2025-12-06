@@ -4,41 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minecraftowa Liga Żużlowa</title>
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-        <!-- MENU NAVIGACJI -->
-        <nav>
-            <ul>
-                <li><a href="mecze.html">Mecze</a></li>
-                <li><a href="tabela.html">Tabela</a></li>
-                <li><a href="wydarzenia.html">Wydarzenia</a></li>
-                <li><a href="baza.html">Baza</a></li>
-                <li><a href="statystyki.html">Statystyki</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="live.html">Live</a></li>
-                <li><a href="boatclick.html">Boatclick</a></li>
-                <li><a href="mlz-manage.html">MLŻ Manage</a></li>
-                <li><a href="regulamin.html">Regulamin</a></li>
-            </ul>
-        </nav>
 
-        <a href="index.html">
-            <div class="logo-area">
-                <img src="zdj/logo.png" alt="Logo"/>
-                <h1>Minecraftowa Liga Żużlowa - Główna</h1>
-            </div>
-        </a>
+    <!-- GÓRNY PASEK -->
+    <header class="top-header">
+        <div class="logo-area">
+            <img src="logo.png" alt="Logo" class="logo" />
+            <h1>Minecraftowa Liga Żużlowa</h1>
+        </div>
     </header>
 
+    <!-- MENU NAVIGACJI -->
+    <nav class="menu">
+        <a href="index.html">Newsy</a>
+        <a href="mecze.html">Mecze</a>
+        <a href="tabela.html">Tabela</a>
+        <a href="wydarzenia.html">Wydarzenia</a>
+        <a href="baza.html">Baza</a>
+        <a href="statystyki.html">Statystyki</a>
+        <a href="forum.html">Forum</a>
+        <a href="live.html">Live</a>
+        <a href="boatclick.html">Boatclick</a>
+        <a href="mlz-manage.html">MLŻ Manage</a>
+        <a href="regulamin.html">Regulamin</a>
+    </nav>
 
-    <!-- Główny Kontener -->
-    <div class="container">
+    <!-- GŁÓWNY LAYOUT 3-KOLUMNOWY -->
+    <div class="layout">
 
         <!-- LEWA KOLUMNA -->
         <div class="left-col">
@@ -50,7 +45,7 @@
         <!-- ŚRODKOWA KOLUMNA -->
 
         <div class="center-col">
-            <img src="zdj/main.png" class="main-img" alt="Obrazek" />
+            <img src="main.jpg" class="main-img" alt="Obrazek" />
 
             <div class="panel big">
                 <h2>Co nowego w lidze</h2>
@@ -60,7 +55,7 @@
             <div class="panel discord-panel">
                 <h2>Dołącz na Discord!</h2>
                 <p>Wejdź na serwer, aby być na bieżąco z newsami i wydarzeniami.</p>
-                <a href="https://discord.gg/bhsUPSHrU" class="discord-btn" target="_blank">Dołącz teraz</a>
+                <a href="https://discord.gg/bhsUPSHrU" class="discord-btn">Dołącz teraz</a>
             </div>
 
             <div class="panel big">artykuły</div>
@@ -71,7 +66,7 @@
             <div class="panel">najbliższe mecze</div>
             <div class="panel">forum dyskusyjne</div>
         </div>
-        
+
     </div>
 
     <!-- STOPKA -->
