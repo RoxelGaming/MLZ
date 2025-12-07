@@ -13,12 +13,42 @@ header {
 
 }
 
-header h1 {
+header a span h1 {
 
     margin: 0;
 
     font-size: 26px;
-    letter-spacing: 1px;
+    letter-spacing: 4px;
+
+}
+
+header a span h2 {
+
+    font-size: 12px;
+    text-decoration: underline;
+
+}
+
+header a {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+header img {
+
+    --img-header-padding: 10px;
+
+    width: calc(var(--header-height) - var(--img-header-padding));
+    height: calc(var(--header-height) - var(--img-header-padding));
+
+    border-radius: 3px;
 
 }
 
