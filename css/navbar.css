@@ -79,7 +79,7 @@ nav a:hover {
 }
 
 /* zmiana wielkości strony responsywność */
-button {
+.button {
 
     display: none;
 
