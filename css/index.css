@@ -1,0 +1,65 @@
+.layout {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.left-col,
+.right-col {
+
+    width: 200px;
+
+}
+
+.center-col {
+
+    width: 600px;
+
+}
+
+.panel {
+
+    background: #222;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+
+}
+
+.big {
+
+    height: 180px;
+
+}
+
+.main-img {
+
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+}
+
+.discord-panel {
+
+    background: #4a5cff;
+    color: white;
+    text-align: center;
+
+}
+
+.discord-btn {
+
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+
+}
