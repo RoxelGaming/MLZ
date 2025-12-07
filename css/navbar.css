@@ -103,6 +103,8 @@ button {
 
         display: flex;
 
+        z-index: 1;
+
     }
 
     .button {
