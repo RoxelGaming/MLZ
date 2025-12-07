@@ -13,7 +13,7 @@ h1 {
 
 }
 
-a {
+.back {
 
     color: #ffc400;
 
@@ -23,7 +23,7 @@ a {
 
 }
 
-a:hover {
+.back:hover {
 
     text-decoration: underline;
 

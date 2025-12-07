@@ -1,14 +1,14 @@
 header {
 
     width: 100%;
-    padding: 20px;
+    height: var(--header-height);
 
     background-color: var(--sidebar-color);
 
     border-bottom: 3px solid var(--bar-color);
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
 }
@@ -32,21 +32,138 @@ nav {
 
 nav a {
 
-    color: var(--text-color);
-
     transition: var(--tran-02);
 
-    margin-left: 25px;
+    padding: 15px;
 
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     text-decoration: none;
-
 
 }
 
 nav a:hover {
 
     color: var(--header-text-color-tran);
+
+}
+
+/* zmiana wielkości strony responsywność */
+button {
+
+    display: none;
+
+}
+
+@media (max-width: 1000px) {
+
+    nav {
+
+        display: none;
+
+    }
+
+    .button {
+
+        width: 70px;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+    }
+
+    .bars {
+
+        --bars-width: 40px;
+        --bars-height: 6px;
+
+        width: var(--bars-width);
+        height: var(--bars-height);
+
+        background-color: var(--text-color);
+
+    }
+
+    .bars::after {
+
+        content: '';
+        background-color: var(--text-color);
+
+        width: var(--bars-width);
+        height: var(--bars-height);
+
+        position: absolute;
+
+        transform: translateY(13px);
+
+    }
+
+    .bars::before {
+
+        content: '';
+        background-color: var(--text-color);
+
+        width: var(--bars-width);
+        height: var(--bars-height);
+
+        position: absolute;
+
+        transform: translateY(-13px);
+
+    }
+
+    header:has(.button:hover) nav,
+    header:has(nav:hover) nav {
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 20px;
+        gap: 3px;
+
+        position: absolute;
+        top: var(--header-height);
+
+        background-color: var(--sidebar-color);
+
+        border-bottom: 3px solid var(--bar-color);
+
+    }
+
+    nav a {
+
+        width: 80%;
+        height: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: var(--tran-02);
+
+        padding: 5px;
+        border-radius: 10px;
+
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+
+    }
+
+    nav a:hover {
+
+        color: var(--header-text-color-tran);
+        background-color: var(--sidebar-color-ultra-dark);
+
+    }
+
 
 }
