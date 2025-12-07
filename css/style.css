@@ -30,9 +30,11 @@
     --page-elements-color: #1e1e1e;
 
 
-    --primary-color: #ffc400;
-    --primary-color-switch: #b18700;
-    --primary-color-light: #ffffff;
+    --primary-color: #00aaff;
+
+    --primary-color-light: oklch(from var(--primary-color) clamp(0, l + 0.22, 1) calc(c * 0.9) h);
+    --primary-color-dark: oklch(from var(--primary-color) clamp(0, l - 0.22, 1) calc(c * 0.92) h);
+    --primary-color-complement: hsl(from var(--primary-color) calc(h - 180) s l);
 
     --toggle-color: #FFF;
 

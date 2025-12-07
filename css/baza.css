@@ -5,3 +5,35 @@
     align-items: center;
 
 }
+
+.color {
+
+    width: 200px;
+    height: 200px;
+
+}
+
+.primary {
+
+    background-color: var(--primary-color);
+
+}
+
+.c1 {
+
+    background-color: var(--primary-color-light);
+
+}
+
+.c2 {
+
+    background-color: var(--primary-color-dark);
+
+}
+
+.c3 {
+
+    background-color: var(--primary-color-complement);
+
+}
+

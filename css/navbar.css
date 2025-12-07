@@ -74,7 +74,7 @@ nav a {
 
 nav a:hover {
 
-    color: var(--header-text-color-tran);
+    color: var(--primary-color);
 
 }
 
@@ -216,28 +216,6 @@ nav a:hover {
 
     }
 
-    /* header:has(.button:hover) nav,
-    header:has(nav:hover) nav {
-
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding-bottom: 20px;
-        gap: 3px;
-
-        position: absolute;
-        top: var(--header-height);
-
-        background-color: var(--sidebar-color);
-
-        border-bottom: 3px solid var(--bar-color);
-
-    } */
-
     header:has(.button.active) nav {
 
         width: 100%;
@@ -282,7 +260,7 @@ nav a:hover {
     nav a:hover {
 
         color: var(--header-text-color-tran);
-        background-color: var(--sidebar-color-ultra-dark);
+        background-color: var(--body-color);
 
     }
 
