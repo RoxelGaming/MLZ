@@ -23,13 +23,16 @@
     --sidebar-color: #1a1a1a;
     --sidebar-color-ultra-dark: #000000;
 
-    --header-text-color-tran: #0af;
+    --header-text-color-tran: rgba(0, 170, 255, 0.774);
+    --header-text-color-tran-dark: #006496;
     --bar-color: #333;
 
     --page-elements-color: #1e1e1e;
-    --primary-color: #008000;
-    --primary-color-switch: #008000;
-    --primary-color-light: #3A3B3C;
+
+
+    --primary-color: #ffc400;
+    --primary-color-switch: #b18700;
+    --primary-color-light: #ffffff;
 
     --toggle-color: #FFF;
 

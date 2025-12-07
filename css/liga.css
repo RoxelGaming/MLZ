@@ -13,19 +13,73 @@ h1 {
 
 }
 
+.arrow {
+
+    width: 100px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    background-color: red;
+
+    cursor: pointer;
+
+}
+
+.arrowbar {
+
+  width: 15px;
+  height: 3px;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.arrowbar::before {
+  content: '';
+  position: absolute;
+  
+  transform: 
+    translateY(-4px)
+    translateX(-8px); 
+
+  width: 1px; 
+  height: 1px; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  
+  border-right: 10px solid white;
+}
+
 .back {
 
-    color: #ffc400;
-
+    color: var(--header-text-color-tran);
+    padding: 10px 10px 10px 0;
     margin-bottom: 20px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    border-radius: 5px;
+
+    transition: var(--tran-02);
+
     display: inline-block;
-    cursor: pointer;
+
 
 }
 
 .back:hover {
 
+    
+    color: var(--header-text-color-tran-dark);
     text-decoration: underline;
+    
+    transition: var(--tran-02);
 
 }
 
