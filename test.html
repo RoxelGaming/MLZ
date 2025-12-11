@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft League - Zespoły</title>
+    
+    <style>
+        body { font-family: sans-serif; background-color: #1a1a1a; color: white; padding: 20px; }
+        .team-card { border: 1px solid #444; padding: 15px; margin: 10px 0; border-radius: 8px; background: #2a2a2a; }
+        .team-name { font-size: 1.2em; font-weight: bold; color: #4ade80; }
+        .league-info { color: #aaa; font-size: 0.9em; }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <h1>Lista Zespołów</h1>
+    <div id="kontener-zespolow">
+        Ładowanie danych...
+    </div>
+
+    <script>
+        // 2. Konfiguracja połączenia
+        // Zastąp te wartości swoimi z panelu Supabase!
+        const SUPABASE_URL = 'https://mjxktryrqsxjittcfsev.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1qeGt0cnlycXN4aml0dGNmc2V2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUxMjAxNzksImV4cCI6MjA4MDY5NjE3OX0.XpoOxwD-FL3vUNL_sFiYuzMSi7GYLbDpCJMH6xg1e8I';
+
+        // Inicjalizacja klienta Supabase
+        const clientSB = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        async function pobierzZespoly() {
+            console.log("Rozpoczynam pobieranie...");
+
+            const { data, error } = await clientSB
+                .from('teams')
+                .select(`
+                    name,
+                    league ( name_league, year, description ), 
+                    player ( nickname )
+                `);
+                // ^^^ Dodałem 'name_league' do zapytania powyżej
+
+            if (error) {
+                console.error('Błąd:', error);
+                document.getElementById('kontener-zespolow').innerHTML = `<p style="color:red">Błąd: ${error.message}</p>`;
+            } else {
+                wyswietlZespoly(data);
+            }
+        }
+
+        function wyswietlZespoly(zespoly) {
+            const kontener = document.getElementById('kontener-zespolow');
+            kontener.innerHTML = '';
+
+            if (!zespoly || zespoly.length === 0) {
+                kontener.innerHTML = 'Brak zespołów.';
+                return;
+            }
+
+            zespoly.forEach(zespol => {
+                const div = document.createElement('div');
+                div.className = 'team-card';
+
+                // Pobieramy dane ligi bezpiecznie
+                const nazwaLigi = zespol.league ? zespol.league.name_league : 'Liga';
+                const rokLigi = zespol.league ? zespol.league.year : '';
+                const liderNick = zespol.player ? zespol.player.nickname : 'Brak lidera';
+
+                // Wyświetlamy: "SuperLiga Minecraft 2025"
+                div.innerHTML = `
+                    <div class="team-name">${zespol.name}</div>
+                    <div>Lider: <strong>${liderNick}</strong></div>
+                    <div class="league-info">${nazwaLigi} ${rokLigi}</div>
+                `;
+                kontener.appendChild(div);
+            });
+        }
+
+    pobierzZespoly()
+
+    </script>
+</body>
+</html>
