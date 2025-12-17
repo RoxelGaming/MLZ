@@ -1,5 +1,5 @@
 const SUPABASE_URL = 'https://mjxktryrqsxjittcfsev.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6I';
+const SUPABASE_KEY = 'TU_WKLEJ_CAŁY_ANON_KEY';
 
 const supabaseClient = supabase.createClient(
   SUPABASE_URL,
@@ -17,12 +17,64 @@ async function loadEkstraliga() {
 
   if (error) {
     tableBody.innerHTML = `<tr><td colspan="6">Błąd ładowania</td></tr>`;
+    console.error(error);
     return;
   }
 
   tableBody.innerHTML = '';
 
   data.forEach((team, index) => {
+    const position = index + 1;
+
+    let className = '';
+    if (position <= 6) className = 'playoff';
+    else if (position === 7) className = 'baraze';
+    else if (position === 8) className = 'spadek';
+
+    tableBody.innerHTML += `
+      <tr class="${className}">
+        <td>${position}</td>
+        <td>${team.team}</td>
+        <td>${team.matches}</td>
+        <td>${team.wins}</td>
+        <td>${team.losses}</td>
+        <td>${team.points}</td>
+      </tr>
+    `;
+  });
+}
+
+loadEkstraliga();
+  if (error) {
+    tableBody.innerHTML = `<tr><td colspan="6">Błąd ładowania</td></tr>`;
+    console.error(error);
+    return;
+  }
+
+  tableBody.innerHTML = '';
+
+  data.forEach((team, index) => {
+    const position = index + 1;
+
+    let className = '';
+    if (position <= 6) className = 'playoff';
+    else if (position === 7) className = 'baraze';
+    else if (position === 8) className = 'spadek';
+
+    tableBody.innerHTML += `
+      <tr class="${className}">
+        <td>${position}</td>
+        <td>${team.team}</td>
+        <td>${team.matches}</td>
+        <td>${team.wins}</td>
+        <td>${team.losses}</td>
+        <td>${team.points}</td>
+      </tr>
+    `;
+  });
+}
+
+loadEkstraliga(); {
     let rowClass = '';
 
     if (index < 6) rowClass = 'playoff';
