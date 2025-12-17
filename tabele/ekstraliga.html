@@ -1,18 +1,41 @@
-<!DOCTYPE html>  <html lang="pl">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>MLŻ — Ekstraliga</title>  
-    <link rel="stylesheet" href="../css/style.css">  
-    <link rel="stylesheet" href="../css/liga.css">  
-    <link rel="stylesheet" href="../css/navbar.css">  
-</head>  
-<body>  <!-- HEADER (z poprzedniego kodu) -->  
-<header>  
-    <a href="../index.html">   
-        <img src="../zdj/logo.png" alt="LOGO">  
-        <span>  
-            <h1>MLŻ</h1>  
+@@ -40,11 +40
+,26 @@ <h2>Minecraftowa Liga Żużlowa</h2>
+
+<div class="arrowshaft"></div>
+
+<span class="back">Powrót</span>
+
+</a>
+  <h1>Ekstraliga</h1>
+  <div class="box">
+    <p>Tu pojawi się tabela, terminarz i statystyki ekstraligi.</p>
+  </div>
+</section>
+
+<h2>Tabela ligowa</h2>
+
+<table class="league-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Drużyna</th>
+      <th>M</th>
+      <th>W</th>
+      <th>P</th>
+      <th>PKT</th>
+    </tr>
+  </thead>
+  <tbody id="tabela-ligowa">
+    <tr><td colspan="6">Ładowanie...</td></tr>
+  </tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/tabela.js"></script>
+
+<footer class="footer">
+  © 2025 MLŻ – Wszelkie prawa zastrzeżone.
+</footer> 
             <h2>Minecraftowa Liga Żużlowa</h2>  
         </span>  
     </a>  
