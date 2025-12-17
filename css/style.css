@@ -15,6 +15,12 @@
 
 }
 
+html {
+
+    scrollbar-gutter: stable;
+
+}
+
 :root {
   /* ===================== COLOR ===================== */
   
@@ -83,7 +89,8 @@ a {
 
 section {
 
-    min-height: 82.8vh;
+    display: grid;
+    grid-column: auto 1fr auto;
 
 }
 
