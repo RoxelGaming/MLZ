@@ -40,11 +40,26 @@
             <div class="arrowshaft"></div>
             <span class="back">Powrót</span>
         </a>
-        <h1>Ekstraliga</h1>
-        <div class="box">
-            <p>Tu pojawi się tabela, terminarz i statystyki ekstraligi.</p>
-        </div>
-    </section>
+        <h2>Tabela ligowa</h2>
+
+<table class="league-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Drużyna</th>
+      <th>M</th>
+      <th>W</th>
+      <th>P</th>
+      <th>PKT</th>
+    </tr>
+  </thead>
+  <tbody id="tabela-ligowa">
+    <tr><td colspan="6">Ładowanie...</td></tr>
+  </tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/tabela.js"></script>
 
     <footer class="footer">
         © 2025 MLŻ — Wszelkie prawa zastrzeżone.
